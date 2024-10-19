@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shaheen Autos - Your one-stop showroom for new and used Honda bikes.">
+    <title>Shaheen Autos | New & Used Honda Bikes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- FontAwesome -->
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">Shaheen Autos</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#bikes">Bikes</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries, please chat with us on WhatsApp or email us.</p>
+        <a href="https://wa.me/923067100070" class="whatsapp-btn">Chat on WhatsApp</a>
+        <br>
+        <a href="mailto:xphassanali6@gmail.com" class="email-link">Email Us</a>
+    </section>
+    <section id="location">
+        <h2>Our Location</h2>
+        <p>Visit us at:</p>
+        <p><strong>Shaheen Autos Showroom</strong><br>
+        Patan Road, Pindi Bhattian, Hafizabad, Pakistan</p>
+        <p>We look forward to helping you find your dream bike!</p>
+    </section>
+
+<!-- Search Bar -->
+<section id="search">
+    <input type="text" id="search-bar" placeholder="Search bikes by name or model...">
+</section>
+
+<!-- Filters -->
+<section id="filters">
+    <label for="price-filter">Price Range:</label>
+    <select id="price-filter">
+        <option value="all">All</option>
+        <option value="0-150000">Under PKR 150,000</option>
+        <option value="150000-250000">PKR 150,000 - PKR 250,000</option>
+        <option value="250000">Above PKR 250,000</option>
+    </select>
+
+    <label for="color-filter">Color:</label>
+    <select id="color-filter">
+        <option value="all">All Colors</option>
+        <option value="red">Red</option>
+        <option value="black">Black</option>
+        <option value="blue">Blue</option>
+    </select>
+</section>
+<!-- Sticky Call-to-Action Buttons (Footer/Sidebar) -->
+<div class="sticky-footer">
+    <a href="https://wa.me/923067100070" class="cta-btn whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+    </a>
+    <a href="#callback-form" class="cta-btn callback-btn">
+        <i class="fas fa-phone-alt"></i> Request a Callback
+    </a>
+    <a href="#finance-calculator" class="cta-btn finance-btn">
+        <i class="fas fa-calculator"></i> Get Financing Quote
+    </a>
+</div>
+
+<!-- Callback Form (Hidden by default, revealed on click) -->
+<div id="callback-form" class="callback-form" style="display: none;">
+    <h2>Request a Callback</h2>
+    <form>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        
+        <label for="phone">Your Phone Number:</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+        
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+
+
+<script>
+    function compareBikes(bike) {
+        let result;
+        if (bike === "Honda CD 70") {
+            result = "Price: PKR 158,000, Engine: 70cc, Mileage: 60km/l";
+        } else if (bike === "Honda CG 150") {
+            result = "Price: PKR 236,000, Engine: 150cc, Mileage: 50km/l";
+        }
+        document.getElementById('comparison-result').innerText = result;
+    }
+</script>
+
+
+</section>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Your Trusted Showroom for Honda Bikes</h2>
+            <p>We offer a range of new and used Honda bikes with excellent deals. Find the bike that suits your style!</p>
+            <button id="popup-btn">Get Special Offer!</button> <!-- Button to trigger pop-up -->
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Shaheen Autos, we pride ourselves on providing top-quality new and used Honda bikes. Whether you're looking for a powerful sports bike or a reliable commuter, we have it all!</p>
+    </section>
+
+    <section id="bikes">
+        <h1>Our Bikes</h1>
+        <h2>New Models</h2>
+        <div class="bike-grid">
+            <div class="bike-item">
+                <img src="bike1.jpg" alt="Honda CD 70">
+                <h3>Honda CD 70 (2024)</h3>
+                <p>Invoice Price: PKR 158,000/-</p>
+                <a href="https://wa.me/923067100070?text=I'm%20interested%20in%20Honda%20CD%2070" class="whatsapp-btn">Chat on WhatsApp</a>
+            </div>
+
+            <div class="bike-item">
+                <img src="bike2.jpg" alt="Honda CG 150">
+                <h3>Honda CG 150</h3>
+                <p>Invoice Price: PKR 236,000/-</p>
+                <a href="https://wa.me/923067100070?text=I'm%20interested%20in%20Honda%20CG%20150" class="whatsapp-btn">Chat on WhatsApp</a>
+            </div>
+
+            <section id="used-bikes">
+                <h2>Used Bikes for Sale</h2>
+                <div class="used-bike-grid">
+                    <!-- Bike 1 -->
+                    <div class="used-bike-item">
+                        
+                        <h3>Honda CG 125 (2018)</h3>
+                        <p>Price: PKR 95,000/-</p>
+                        <p>Condition: 85% - Good condition, fully maintained</p>
+                        <a href="https://wa.me/923067100070?text=I'm%20interested%20in%20the%20Honda%20CG%20125%20(2018)" class="whatsapp-btn">Chat on WhatsApp</a>
+                    </div>
+            
+                    <!-- Bike 2 -->
+                    <div class="used-bike-item">
+                       
+                        <h3>Honda CD 70 (2020)</h3>
+                        <p>Price: PKR 75,000/-</p>
+                        <p>Condition: 90% - Almost new, very lightly used</p>
+                        <a href="https://wa.me/923067100070?text=I'm%20interested%20in%20the%20Honda%20CD%2070%20(2020)" class="whatsapp-btn">Chat on WhatsApp</a>
+                    </div>
+            
+                    <!-- Bike 3 -->
+                    <div class="used-bike-item">
+                        <img src="used-bike3.jpg" alt="Used Honda CB 150F">
+                        <h3>Unique (2019)</h3>
+                        <p>Price: PKR 50,000/-</p>
+                        <p>Condition: 80% - Well-maintained, excellent running</p>
+                        <a href="https://wa.me/923067100070?text=I'm%20interested%20in%20the%20Honda%20CB%20150F%20(2019)" class="whatsapp-btn">Chat on WhatsApp</a>
+                    </div>
+                </div>
+            </section>
+            
+            
+        
+
+            <!-- Add more bike items as needed -->
+        </div>
+
+    </section>
+    <!-- Bikes Listing (With Filter Logic in JS) -->
+<section id="bikes" class="bike-grid">
+    <!-- Bikes dynamically loaded here -->
+</section>
+<section id="comparison">
+    <h2>Compare Bikes</h2>
+    <div id="compare-bikes">
+        <button onclick="compareBikes('Honda CD 70')">Compare Honda CD 70</button>
+        <button onclick="compareBikes('Honda CG 150')">Compare Honda CG 150</button>
+    </div>
+    <div id="comparison-result"></div>
+</section>
+
+    <section id="calculator">
+        <h2>EMI Calculator</h2>
+        <label for="price">Bike Price:</label>
+        <input type="number" id="price" placeholder="Enter price...">
+        
+        <label for="downpayment">Down Payment:</label>
+        <input type="number" id="downpayment" placeholder="Enter down payment...">
+    
+        <label for="interest">Interest Rate (%):</label>
+        <input type="number" id="interest" value="12">
+        
+        <label for="years">Loan Term (Years):</label>
+        <input type="number" id="years" value="3">
+        
+        <button onclick="calculateEMI()">Calculate EMI</button>
+        <p id="emi-result"></p>
+    </section>
+    
+    <script>
+        function calculateEMI() {
+            let price = document.getElementById('price').value;
+            let downpayment = document.getElementById('downpayment').value;
+            let interest = document.getElementById('interest').value;
+            let years = document.getElementById('years').value;
+            let loanAmount = price - downpayment;
+            let monthlyInterest = (interest / 100) / 12;
+            let months = years * 12;
+            let emi = (loanAmount * monthlyInterest * Math.pow(1 + monthlyInterest, months)) / (Math.pow(1 + monthlyInterest, months) - 1);
+            document.getElementById('emi-result').innerText = `Your EMI is PKR ${emi.toFixed(2)} per month`;
+        }
+    </script>
+
+    
+    <section id="specification">
+        <h2>specification</h2>
+        Engine	4-Stroke OHC Air Cooled
+    Displacement	72 cm3
+    Bore & Stroke	47.0 x 41.4 mm
+    Compression Ratio	9.3:1
+    Clutch	Multiplate Wet Clutch
+    Transmission	4 Speed Constant Mesh
+    Starting	Kick Start
+    Frame	Backbone Type
+    Dimension(LxWxH)	1897 x 751 x 1014 mm
+    Ground Clearance	136 mm
+    Petrol Capacity	8.5 Liters (Reserve: 1.0 Liter)
+    Tire at Front	2.25 – 17 (4 PR)
+    Tire at Back	2.50 – 17 (4 PR)
+    Dry Weight	82kg
+
+    <section id="location">
+        <h2>Our Location</h2>
+        <p>Visit us at:</p>
+        <p><strong>Shaheen Autos Showroom</strong><br>
+        Patan Road, Pindi Bhattian, Hafizabad, Pakistan</p>
+        <p>We look forward to helping you find your dream bike!</p>
+    </section>
+
+<!-- Financing Calculator Section -->
+<section id="finance-calculator">
+    <h2>Bike Financing Calculator</h2>
+    <label for="loan-amount">Loan Amount (PKR):</label>
+    <input type="number" id="loan-amount" placeholder="Enter Amount">
+    
+    <label for="interest-rate">Interest Rate (%):</label>
+    <input type="number" id="interest-rate" placeholder="Enter Interest Rate">
+    
+    <label for="term-years">Term (Years):</label>
+    <input type="number" id="term-years" placeholder="Enter Term">
+    
+    <button id="calculate-finance">Calculate</button>
+    <p id="monthly-payment"></p>
+</section>
+
+<script>
+    document.getElementById("calculate-finance").addEventListener("click", function() {
+        // Get input values
+        const loanAmount = parseFloat(document.getElementById("loan-amount").value);
+        const interestRate = parseFloat(document.getElementById("interest-rate").value) / 100 / 12; // Monthly interest rate
+        const termYears = parseFloat(document.getElementById("term-years").value);
+        const numberOfPayments = termYears * 12; // Total number of payments
+
+        // Calculate monthly payment using the formula
+        const monthlyPayment = (loanAmount * interestRate) / (1 - Math.pow(1 + interestRate, -numberOfPayments));
+
+        // Display the monthly payment
+        if (!isNaN(monthlyPayment) && (monthlyPayment !== Infinity) && (monthlyPayment > 0)) {
+            document.getElementById("monthly-payment").textContent = `Monthly Payment: PKR ${monthlyPayment.toFixed(2)}`;
+        } else {
+            document.getElementById("monthly-payment").textContent = "Please enter valid values.";
+        }
+    });
+</script>
+
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries, please chat with us on WhatsApp or email us.</p>
+        <a href="https://wa.me/923067100070" class="whatsapp-btn">Chat on WhatsApp</a>
+        <br>
+        <a href="mailto:xphassanali6@gmail.com" class="email-link">Email Us</a>
+    </section>
+    <section id="blog">
+        <h2>Latest News & Blogs</h2>
+        <article class="blog-post">
+            <h3>How to Choose the Right Honda Bike for You</h3>
+            <p>Buying a bike is a significant investment, so it's crucial to choose the one that fits your needs perfectly...</p>
+            <a href="blog1.html">Read more</a>
+        </article>
+        <article class="blog-post">
+            <h3>New 2024 Honda Models Review</h3>
+            <p>Honda's new 2024 lineup brings an exciting array of bikes, from sporty models to everyday commuters...</p>
+            <a href="blog2.html">Read more</a>
+        </article>
+    </section>
+    <section id="newsletter">
+        <h2>Subscribe to our Newsletter</h2>
+        <form>
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+    <section id="testimonials">
+    <h2>Customer Reviews</h2>
+    <div class="testimonial">
+        <p>"Bought my first Honda bike from Shaheen Autos! Great service and reliable!" - <strong>Ali Raza</strong></p>
+    </div>
+    <div class="testimonial">
+        <p>"The prices are unbeatable and the staff are very friendly. Highly recommend!" - <strong>Fatima Khan</strong></p>
+    </div>
+</section>
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <p><strong>Q1:</strong> What types of bikes do you offer?<br>
+        <strong>A:</strong> We offer a range of new and used Honda bikes suitable for all types of riders.</p>
+        <p><strong>Q2:</strong> Do you provide financing options?<br>
+        <strong>A:</strong> Yes, we have financing options available for both new and used bikes.</p>
+        <p><strong>Q3:</strong> Can I test ride a bike before purchasing?<br>
+        <strong>A:</strong> Absolutely! We encourage test rides to help you make the right choice.</p>
+        <p>For any other questions, feel free to contact us directly!</p>
+    </section>
+
+    <!-- Pop-up Modal -->
+    <div id="popup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Special Offer!</h2>
+            <p>Get a discount on your next purchase. Contact us for more details!</p>
+            <a href="https://wa.me/923067100070" class="whatsapp-btn">Chat for Offer</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Shaheen Autos. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("popup-modal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("popup-btn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
